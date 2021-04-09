@@ -16,9 +16,7 @@ const AboutPage = () => {
       <Link to="/">back to home</Link>
       <br />
       <Link to="/persons">view persons</Link>
-      <Container>
-        <Carousel images={images} />
-      </Container>
+      <Container>Hello</Container>
     </div>
   )
 }

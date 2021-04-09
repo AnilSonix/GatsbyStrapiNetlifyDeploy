@@ -15,6 +15,18 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: "12.x"
+          
+      - name: Caching Gatsby
+        id: gatsby-cache-build
+        uses: actions/cache@v2.1.4
+        with:
+          path: |
+            public
+            .cache
+          key: ${{ runner.os }}-gatsby-build-${{ github.run_id }}
+          restore-keys: |
+            ${{ runner.os }}-gatsby-build-
+            
       - run: npm install
       # This triggers `gatsby build` script in "package.json"
       - run: npm run build

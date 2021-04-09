@@ -16,7 +16,7 @@ const AboutPage = () => {
       <Link to="/">back to home</Link>
       <br />
       <Link to="/persons">view persons</Link>
-      <Container>Hello there ! customer</Container>
+      <Container>Hello there ! customers</Container>
     </div>
   )
 }

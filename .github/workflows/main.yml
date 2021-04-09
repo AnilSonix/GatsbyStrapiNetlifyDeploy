@@ -1,4 +1,4 @@
-name: Build and Deploy to Gatsby every two hours
+name: Build and Deploy to Gatsby to Netlify
 
 # Triggers the workflow on push or pull request events
 on: [push, pull_request,repository_dispatch]
@@ -10,9 +10,9 @@ jobs:
 
     steps:
       # Check out the current repository code
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v2.3.4
       # 3. https://github.com/actions/setup-node#usage
-      - uses: actions/setup-node@v1
+      - uses: actions/setup-node@v2.1.5
         with:
           node-version: "12.x"
           
